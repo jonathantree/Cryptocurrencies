@@ -6,7 +6,22 @@ This project seeks to employ an unsupervised categorization model of cryptocurre
 3. Clustering Cryptocurrencies Using K-means
 4. Visualizing Cryptocurrencies Results
 
-### Clustering Crypto
+## Results : Visualization of the K-Means Classification using PCA
+
+### Elbow Curve in Optimization of K-selection
+![Elbow_Curve](Images/crypto_elbow_plot.png)
+
+### 3D Scatter of the categories based on 3 principal components and a k=4 clusters
+![3D_Scatter](Images/scatter_3d_crypto.png)
+
+### Interactive Sortable and Selectable Table of the Tradable Cryptocurrencies
+![Table](Images/Crytpo_table.png)
+
+### 2D Scatter Plot of the Total Coins Mined vs. Supply for the K-Means Categories
+![2D Scatter](Images/2D_scatter_CoinSupply_coinsMined.png)
+
+
+### Clustering Crypto Code
 
 
 ```python
@@ -1111,7 +1126,7 @@ df_elbow = pd.DataFrame(elbow_data)
 df_elbow.hvplot.line(x="k", y="inertia", title="Elbow Curve", xticks=k)
 ```
 
-
+**See Plot in Results Section**
 
 
 Running K-Means with `k=4`
@@ -1453,7 +1468,7 @@ fig = px.scatter_3d(
 fig.update_layout(legend=dict(x=0, y=1))
 fig.show()
 ```
-### FIGURE
+### FIGURE - **See Plot in Results Summary Above**
 
 ```python
 # Print the total number of tradable cryptocurrencies.
@@ -1805,5 +1820,6 @@ plot_df.hvplot.scatter(
 )
 ```
 
+### FIGURE - **See Plot in Results Summary Above**
 
 
